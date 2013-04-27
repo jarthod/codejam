@@ -3,7 +3,8 @@
 require 'fileutils'
 
 def template name
-  DATA.read[/(?<=@@ #{name}\n)([^@]+)/m]
+  $data ||= DATA.read
+  $data[/(?<=@@ #{name}\n)([^@]+)/m]
 end
 
 ARGV.each do |name|
@@ -23,9 +24,8 @@ __END__
 #!/usr/bin/env ruby
 
 gets.to_i.times do |i|
-  # gets.chomp.split('')
+  # = gets.split.map &:to_i
   puts "Case ##{i+1}: "
-  gets
 end
 
 @@ cpp-program
