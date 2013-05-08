@@ -25,7 +25,9 @@ __END__
 
 gets.to_i.times do |i|
   # = gets.split.map &:to_i
-  puts "Case ##{i+1}: "
+  print "Case ##{i+1}: "
+  $stdout.flush
+  puts nil
 end
 
 @@ cpp-program
