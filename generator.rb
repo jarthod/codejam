@@ -23,10 +23,11 @@ __END__
 @@ ruby-program
 #!/usr/bin/env ruby
 
-gets.to_i.times do |i|
-  # = gets.split.map &:to_i
-  print "Case ##{i+1}: "
+gets.to_i.times do |c|
+  print "Case ##{c+1}: "
   $stdout.flush
+
+  # = gets.split.map &:to_i
   puts nil
 end
 
